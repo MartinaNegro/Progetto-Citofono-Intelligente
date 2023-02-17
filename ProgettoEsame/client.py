@@ -10,7 +10,7 @@ from requests import post
 
 ########### URL DEL SERVER DI GCP ###########
 
-base_url = 'https://progettoesame-378011.appspot.com/'
+base_url = 'https://progettoesame-378100.appspot.com/'
 
 
 ########### UTILIZZO MODULO SIMPLEFACEREC IMPORTATO DA SIMPLE_FACEREC.PY ###########

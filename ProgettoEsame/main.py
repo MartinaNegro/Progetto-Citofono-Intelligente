@@ -38,7 +38,7 @@ def save_data():
         file.save(os.path.join('/tmp/', fname))
 
         client = storage.Client()
-        bucket = client.bucket('raccolta-foto')
+        bucket = client.bucket('raccolta-screen')
         source_file_name = fname
         destination_blob_name = source_file_name
         blob = bucket.blob(destination_blob_name)
@@ -70,7 +70,7 @@ def create_table():
 @app.route('/photo', methods=['GET'])
 def view_screen():
     storage_client = storage.Client()
-    bucket = storage_client.get_bucket('raccolta-foto')
+    bucket = storage_client.get_bucket('raccolta-screen')
     filename = [filename.name for filename in list(bucket.list_blobs(prefix=''))]
 
     im = filename[len(filename)-1]
